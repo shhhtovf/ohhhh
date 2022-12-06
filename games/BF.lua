@@ -1,4 +1,4 @@
-local Game_Name =  "|  Blox Fruit .gg/uk6BjEtW2d"
+_G.Game_Name =  "|  Blox Fruit .gg/uk6BjEtW2d"
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/shhhtovf/ohhhh/main/games/LIB/library.lua", true))()
 
