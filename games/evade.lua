@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://jjt-x-hub.jjtchannel.repl.co/games/LIB/library.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shhhtovf/ohhhh/main/games/LIB/library.lua", true))()
 
 -- ENVs
 
