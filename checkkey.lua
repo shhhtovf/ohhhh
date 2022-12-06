@@ -6,7 +6,7 @@ local plr = game.Players.LocalPlayer.UserId
 if _G.key == "ADMIN" then
   print("Correct Admin")
   loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
-elseif _G.key == "JJT_12333827" .. hwid then
+elseif _G.key == "JJT_" .. hwid then
   print("Correct")
   loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
 elseif game:GetService("MarketplaceService"):UserOwnsGamePassAsync(plr, id) then
