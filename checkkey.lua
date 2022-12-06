@@ -5,13 +5,13 @@ local plr = game.Players.LocalPlayer.UserId
 
 if _G.key == "ADMIN" then
   print("Correct Admin")
-  loadstring(game:HttpGet"https://jjt-x-hub.jjtchannel.repl.co/loader.lua")()
+  loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
 elseif _G.key == "JJT_12333827" .. hwid then
   print("Correct")
-  loadstring(game:HttpGet"https://jjt-x-hub.jjtchannel.repl.co/loader.lua")()
+  loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
 elseif game:GetService("MarketplaceService"):UserOwnsGamePassAsync(plr, id) then
 	print("hav access") 
-  loadstring(game:HttpGet"https://jjt-x-hub.jjtchannel.repl.co/loader.lua")()
+  loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
 else
   print("incorrect KEY!")
   game.StarterGui:SetCore("SendNotification", {
