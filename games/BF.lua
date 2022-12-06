@@ -1,7 +1,9 @@
+local Game_Name =  "|  Blox Fruit .gg/uk6BjEtW2d"
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/shhhtovf/ohhhh/main/games/LIB/library.lua", true))()
 
 
-local Library = Update:Window("JJT x Hub V.2"," |  Blox Fruit .gg/uk6BjEtW2d",Enum.KeyCode.RightControl);
+local Library = Update:Window("JJT x Hub V.2","",Enum.KeyCode.RightControl);
 Main = Library:Tab("General")
 
 Main:Seperator("Auto Farm Level")
