@@ -40,7 +40,7 @@ getgenv().Settings = {
 
 -- Uis
 
-local Library = Update:Window("JJT x Hub"," |  Blox Fruit .gg/uk6BjEtW2d",Enum.KeyCode.RightControl);
+local Library = Update:Window("JJT x Hub","",Enum.KeyCode.RightControl);
 
 EvadeSector = Library:Tab("Main")
 
