@@ -1520,63 +1520,7 @@ local Boss = {}
         StopTween(_G.AutoAllBoss)
     end)
     
-    Main:Seperator("Auto Accessories")
     
-    WaponAccessories = {} 
-	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
-		if v:IsA("Tool") then 
-			if v.ToolTip == "Wear" then    
-				table.insert(WaponAccessories, v.Name)
-			end
-		end
-	end
-	SelectTooAccessories = ""
-	Main:Toggle("Auto Accessories",false,function(Value)
-		AutoAccessories = Value 
-	end)
-	spawn(function()
-		while wait() do
-			if AutoAccessories then
-				CheckAccessories = game.Players.LocalPlayer.Character 
-				if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health > 0 then
-					if CheckAccessories:FindFirstChild("CoolShades") or CheckAccessories:FindFirstChild("BlackSpikeyCape") or CheckAccessories:FindFirstChild("BlueSpikeyCape") or CheckAccessories:FindFirstChild("RedSpikeyCape") or CheckAccessories:FindFirstChild("Chopper") or CheckAccessories:FindFirstChild("MarineCape") or CheckAccessories:FindFirstChild("GhoulMask") or CheckAccessories:FindFirstChild("MarineCap") or CheckAccessories:FindFirstChild("PinkCape") or CheckAccessories:FindFirstChild("SaboTopHat") or CheckAccessories:FindFirstChild("SwanGlasses") or CheckAccessories:FindFirstChild("UsoapHat") or CheckAccessories:FindFirstChild("Corrida") or CheckAccessories:FindFirstChild("ZebraCap") or CheckAccessories:FindFirstChild("TomoeRing") or CheckAccessories:FindFirstChild("BlackCape") or CheckAccessories:FindFirstChild("SwordsmanHat") or CheckAccessories:FindFirstChild("SantaHat") or CheckAccessories:FindFirstChild("ElfHat") or CheckAccessories:FindFirstChild("DarkCoat") or CheckAccessories:FindFirstChild("Valkyrie Helm") then
-					else
-						EquipWeapon(SelectTooAccessories)
-						wait(0.1)
-						game:GetService'VirtualUser':CaptureController()
-						game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-						wait(0.1)
-						if game.Players.LocalPlayer.Character:FindFirstChild(SelectTooAccessories) then
-							game.Players.LocalPlayer.Character:FindFirstChild(SelectTooAccessories).Parent = game.Players.LocalPlayer:FindFirstChild("Backpack")
-						end
-						wait(1)
-					end
-				end
-			end
-		end
-	end)
-
-	local SelectAccessories = Main:Dropdown("Select Accessories",WaponAccessories,function(Value)
-		SelectTooAccessories = Value
-	end)
- Main:Button("Refresh Accessories",function()
-		SelectAccessories:Clear()
-		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-			if v:IsA("Tool") then 
-				if v.ToolTip == "Wear" then    
-					SelectAccessories:Add(v.Name)
-				end
-			end
-		end
-		for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-			if v:IsA("Tool") then 
-				if v.ToolTip == "Wear" then    
-					SelectAccessories:Add(v.Name)
-				end
-			end
-		end
-	end)
-
 Stats = Library:Tab("Stats")
 
 Stats:Seperator("Auto Stats")
