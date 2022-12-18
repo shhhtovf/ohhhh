@@ -1433,6 +1433,21 @@ spawn(function()
 		end
 	end
 end)
+
+Main:Toggle("Auto Ken Haki",_G.Auto_Ken,function(vu)
+	_G.Auto_Ken = vu
+end)
+spawn(function()
+	while wait(2) do
+		pcall(function()
+			if _G.Auto_Ken then
+				game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("Ken",true)
+				wait(7)
+			end
+		end)
+	end
+end)
+
 Main:Toggle("Auto Set Spawn Points",true,function(value)
         _G.AutoSetSpawn = value
     end)
@@ -3624,12 +3639,36 @@ if game.PlaceId == 2753915549 then
                 NameQuest = "CakeQuest2"
                 NameMon = "Baking Staff"
                 CFrameQuest = CFrame.new(-1927.91602, 37.7981339, -12842.5391, -0.96804446, 4.22142143e-08, 0.250778586, 4.74911062e-08, 1, 1.49904711e-08, -0.250778586, 2.64211941e-08, -0.96804446)
-            elseif MyLevel >= 2275 then
+            elseif MyLevel == 2275 or MyLevel <= 2299 then
                 Mon = "Head Baker [Lv. 2275]"
                 LevelQuest = 2
                 NameQuest = "CakeQuest2"
                 NameMon = "Head Baker"
                 CFrameQuest = CFrame.new(-1927.91602, 37.7981339, -12842.5391, -0.96804446, 4.22142143e-08, 0.250778586, 4.74911062e-08, 1, 1.49904711e-08, -0.250778586, 2.64211941e-08, -0.96804446)
+	elseif MyLevel == 2300 or MyLevel <= 2324 then
+                Mon = "Cocoa Warrior [Lv. 2300]"
+                LevelQuest = 1
+                NameQuest = "ChocQuest1"
+                NameMon = "Cocoa Warrior"
+                CFrameQuest = CFrame.new(231.13571166992188, 24.734268188476562, -12195.1162109375)
+ elseif MyLevel == 2325 or MyLevel <= 2349 then
+                Mon = "Chocolate Bar Battler [Lv. 2325]"
+                LevelQuest = 2
+                NameQuest = "ChocQuest1"
+                NameMon = "Chocolate Bar Battler"
+                CFrameQuest = CFrame.new(231.13571166992188, 24.734268188476562, -12195.1162109375)
+ elseif MyLevel == 2350 or MyLevel <= 2374 then
+                Mon = "Sweet Thief [Lv. 2350]"
+                LevelQuest = 1
+                NameQuest = "ChocQuest2"
+                NameMon = "Sweet Thief"
+                CFrameQuest = CFrame.new(147.52256774902344, 24.793832778930664, -12775.3583984375)
+ elseif MyLevel == 2350 or MyLevel <= 2374 then
+                Mon = "Candy Rebel [Lv. 2375]]"
+                LevelQuest = 2
+                NameQuest = "ChocQuest2"
+                NameMon = "Candy Rebel"
+                CFrameQuest = CFrame.new(147.52256774902344, 24.793832778930664, -12775.3583984375)
             end
         end
     end
