@@ -9,6 +9,9 @@ if _G.key == "JJT-yo" .. hwid then
 elseif game:GetService("MarketplaceService"):UserOwnsGamePassAsync(plr, id) then
 	print("hav access") 
   loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
+elseif hwid == 0BC0D1F4-E00D-4B13-B283-9C7C2165D25F then
+	print("owner pass") 
+  loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
 else
   print("incorrect KEY!")
   game.StarterGui:SetCore("SendNotification", {
