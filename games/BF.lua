@@ -1045,7 +1045,14 @@ end
 local Library = Update:Window("JJT x Hub V.2","",Enum.KeyCode.RightControl);
 Main = Library:Tab("General")
 
-Main:Toggle("Auto Farm Level KAITAN mode!",_G.AutoFarm,function(value)
+Main:Dropdown("Select Type Farm",{
+            "Normal",
+            "Fast Mode",
+            },function()
+		
+        end)
+
+Main:Toggle("Start Auto Farm",_G.AutoFarm,function(value)
         _G.AutoFarm = value
         WaterWalk = value
         StopTween(_G.AutoFarm)
@@ -1151,12 +1158,7 @@ end
 end)
 
 
-Main:Dropdown("Select Type Farm",{
-            "Normal",
-            "Fast Mode",
-            },function()
-		
-        end)
+
 
 WeaponList = {}
     
