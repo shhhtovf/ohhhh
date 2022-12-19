@@ -1157,7 +1157,6 @@ Main:Dropdown("Select Type Farm",{
             },function()
 		
         end)
-    end
 
 WeaponList = {}
     
