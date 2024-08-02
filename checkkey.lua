@@ -1,6 +1,6 @@
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 
-if _G.key == "JJT-yo" .. hwid then
+if _G.key == "JJTxHub" .. hwid then
   print("Correct")
   loadstring(game:HttpGet"https://raw.githubusercontent.com/shhhtovf/ohhhh/main/loader.lua")()
 else
